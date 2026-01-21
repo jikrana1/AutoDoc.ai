@@ -16,10 +16,10 @@
 
 ---
 
-# 📖 $\color{#0969da}{\text{About AutoDoc.ai}}$
+# 📖 About AutoDoc.ai
 **AutoDoc.ai** addresses the challenge of outdated documentation due to time constraints. It analyzes repository structures and source code to generate structured content while keeping humans in control via manual editing and previews.
 
-### 🌟 $\color{#2ea44f}{\text{Key Features}}$
+### 🌟 Key Features
 - **Repo Analysis**: Deep scanning of repository structure and configuration files.
 - **Automatic Generation**: Instant creation of README.md and CONTRIBUTING.md files.
 - **API Support**: Dedicated documentation generation for API endpoints.
@@ -28,7 +28,7 @@
 
 ---
 
-# ⚙️ $\color{#8250df}{\text{Setup Instructions}}$
+# ⚙️ Setup Instructions
 
 > [!IMPORTANT]
 > Ensure you have your Gemini API and GitHub tokens ready before starting the services.
@@ -47,7 +47,7 @@
 # AI Service Setup
 + cd ../ai_service && pip install -r requirements.txt
 ```
-# 🔄 $\color{#0969da}{\text{System Architecture}}$
+# 🔄 System Architecture
 The system utilizes a modular three-layer architecture to manage the documentation workflow
 - Frontend: React web interface for URL input and previews
 - Backend: Node.js/Express server orchestrating GitHub API interactions
@@ -67,26 +67,26 @@ graph LR
     style C fill:#0A192F,stroke:#333
     style D fill:#064E3B,stroke:#333
 ```
-## 🛠️ $\color{#38BDF8}{\text{Tech Stack}}$
+## 🛠️ Tech Stack
 
 AutoDoc.ai is built with a modular, scalable architecture across three specialized layers.
 
-### 🌐 $\color{#34D399}{\text{Frontend Layer}}$
+### 🌐 Frontend Layer
 **React**: A React-based web interface for repository input and real-time previews.
 **Languages**: Built using HTML, CSS, and JavaScript for a responsive experience.
 **Markdown Preview**: Supports real-time preview and manual editing of generated content.
 
-### ⚙️ $\color{#38BDF8}{\text{Backend Layer}}$
+### ⚙️ Backend Layer
 **Node.js & Express**: A robust server that orchestrates all GitHub API interactions.
 **GitHub REST API**: Deeply integrates with GitHub to parse repository files and structures.
 
-### 🤖 $\color{#34D399}{\text{AI Service Layer}}$
+### 🤖 AI Service Layer
 **Python Microservice**: A dedicated microservice for intent detection and code summarization.
 **Gemini API**: Leverages advanced AI to generate structured, high-quality documentation text.
 
 
 
-### 🎨 $\color{#38BDF8}{\text{Technology Badges}}$
+### 🎨 Technology Badges
 
 <div align="center">
 
@@ -98,13 +98,10 @@ AutoDoc.ai is built with a modular, scalable architecture across three specializ
 
 </div>
 
-<div align="center">
-  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=abhro05&theme=transparent" alt="Language Distribution Card" />
-</div>
 
 ---
 
-#  $\color{#0969da}{\text{🗺️Roadmap}}$
+#  🗺️ Roadmap
 ```mermaid
 graph TD
     Root[AutoDoc.ai Roadmap]
@@ -131,46 +128,46 @@ graph TD
     style P3 fill:#34D399,stroke:#333,color:#000
     style P4 fill:#34D399,stroke:#333,color:#000
 ```
-## 📅 $\color{#38BDF8}{\text{Implementation Milestones}}$
+## 📅 Implementation Milestones
 
-### 🏗️ $\color{#34D399}{\text{Milestone 1: Project Setup}}$
+### 🏗️ Milestone 1: Project Setup
 - [ ] Repository initialization.
 - [ ] Basic React frontend setup.
 - [ ] Node.js backend scaffolding.
 
-### 🔍 $\color{#34D399}{\text{Milestone 2: Repository Analysis}}$
+### 🔍 Milestone 2: Repository Analysis
 - [ ] GitHub API integration.
 - [ ] File structure parsing.
 
-### 🤖 $\color{#34D399}{\text{Milestone 3: AI Integration}}$
+### 🤖 Milestone 3: AI Integration
 - [ ] Python microservice setup.
 - [ ] Gemini API prompt design.
 
-### ✍️ $\color{#34D399}{\text{Milestone 4: Documentation Generation}}$
+### ✍️ Milestone 4: Documentation Generation
 - [ ] README and CONTRIBUTING generation.
 - [ ] Markdown preview and editing interface.
 
-### 🚀 $\color{#34D399}{\text{Milestone 5: Quality and Expansion}}$
+### 🚀 Milestone 5: Quality and Expansion
 - [ ] API documentation support.
 - [ ] Architecture summaries.
 
 
-### 🌐 $\color{#34D399}{\text{Milestone 6: Open Source Readiness}}$
+### 🌐 Milestone 6: Open Source Readiness
 - [ ] Comprehensive tests and linting.
 - [ ] Project documentation and examples.
 
 ---
-# 🌟 $\color{#38BDF8}{\text{Participation and Contributing}}$
+# 🌟 Participation and Contributing
 
 AutoDoc.ai is built to promote best practices in documentation and modular system design while attracting contributors of all skill levels. The project is designed to be a high-impact, scalable tool for the open-source community.
 
-### $\color{#34D399}{\text{Open Source Programs}}$
+### Open Source Programs
 
 | Program | Name | Timeline |
 | :--- | :--- | :--- |
 | **Resourcio Community** | Aperture 3.0 | Jan 1 – March 1, 2026 |
 
-### $\color{#34D399}{\text{How to Get Involved}}$
+### How to Get Involved
 
 We are currently in the **Open Source Readiness** phase, focusing on comprehensive testing and clear examples. You can contribute by:
 
@@ -185,12 +182,12 @@ We are currently in the **Open Source Readiness** phase, focusing on comprehensi
 
 ---
 
-# 📄 $\color{#38BDF8}{\text{License and Maintainer}}$
+# 📄 License and Maintainer
 
-### $\color{#34D399}{\text{License}}$
+### License
 This project is licensed under the **MIT License**. This ensures the tool remains open and accessible for academic projects, hackathons, and long-term community development.
 
-### $\color{#34D399}{\text{Maintainer}}$
+### Maintainer
 <div align="center">
   <p>
     <strong>❄️Abhro</strong><br>
