@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
+import Spinner from "../components/Spinner";
 
 const Generator = lazy(() => import("./Generator"));
 const Contributors = lazy(() => import("./Contributors"));
@@ -19,7 +20,7 @@ function App() {
       <Route
         path="/generator"
         element={
-          <Suspense fallback={<div className="route-loading" aria-live="polite">Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <Generator />
           </Suspense>
         }
@@ -27,7 +28,7 @@ function App() {
       <Route
         path="/contributors"
         element={
-          <Suspense fallback={<div className="route-loading" aria-live="polite">Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <Contributors />
           </Suspense>
         }
@@ -35,7 +36,7 @@ function App() {
       <Route
         path="*"
         element={
-          <Suspense fallback={<div className="route-loading" aria-live="polite">Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <NotFound />
           </Suspense>
         }
