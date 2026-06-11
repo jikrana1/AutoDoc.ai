@@ -364,6 +364,36 @@ Before submitting your PR, ensure:
 
 All contributors are featured on our Contributors page and in the project README. Significant contributors will be recognized with special badges and invited to join the maintainer team.
 
+## Local Development
+
+To test the project locally, create a `.env` file from `.env.example` and configure an LLM provider.
+
+### Why is this setup required?
+
+This project relies on an external LLM provider to generate repository documentation. Since API keys cannot be included in the public repository, contributors need to configure their own provider locally.
+
+Providing clear OpenRouter and environment setup instructions helps contributors get the project running quickly, reduces configuration-related errors, and improves the overall onboarding experience.
+
+### OpenRouter Setup
+
+1. Create a free account on OpenRouter.
+2. Generate an API key from the dashboard.
+3. Configure the following variables in your `.env` file:
+
+```env
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your_openrouter_api_key
+OPENAI_BASE_URL=https://openrouter.ai/api/v1
+OPENAI_MODEL=openai/gpt-4o-mini
+```
+
+You may use any supported reasoning model available through OpenRouter for local testing.
+
+Common Setup Issues
+- Ensure .env.example is copied/renamed to .env.
+- Verify that your API key is valid.
+- Make sure LLM_PROVIDER is configured correctly.
+
 ---
 
 ## 📄 License and Maintainer
