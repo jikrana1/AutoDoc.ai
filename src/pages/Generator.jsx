@@ -40,10 +40,28 @@ const Generator = () => {
     document.title = "Workspace | AutoDoc.ai";
   }, []);
 
-  const [repoUrl, setRepoUrl] = useState("");
-  const [customInstructions, setCustomInstructions] = useState("");
+  const [repoUrl, setRepoUrl] = useState(() => {
+    try {
+      return localStorage.getItem("autodoc_repo_url") || "";
+    } catch (e) {
+      return "";
+    }
+  });
+  const [customInstructions, setCustomInstructions] = useState(() => {
+    try {
+      return localStorage.getItem("autodoc_custom_instructions") || "";
+    } catch (e) {
+      return "";
+    }
+  });
   const [isGenerating, setIsGenerating] = useState(false);
-  const [markdownOutput, setMarkdownOutput] = useState('');
+  const [markdownOutput, setMarkdownOutput] = useState(() => {
+    try {
+      return localStorage.getItem("autodoc_markdown_output") || "";
+    } catch (e) {
+      return "";
+    }
+  });
   const [activeTab, setActiveTab] = useState('code');
   const [copied, setCopied] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
@@ -145,8 +163,32 @@ const Generator = () => {
       } catch (_) {
         /* ignore parse errors */
       }
-    };
+  useEffect(() => {
+    try {
+      localStorage.setItem("autodoc_repo_url", repoUrl);
+    } catch (e) {
+      console.warn("Failed to save repoUrl to localStorage:", e);
+    }
+  }, [repoUrl]);
 
+  useEffect(() => {
+    try {
+      localStorage.setItem("autodoc_custom_instructions", customInstructions);
+    } catch (e) {
+      console.warn("Failed to save customInstructions to localStorage:", e);
+    }
+  }, [customInstructions]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("autodoc_markdown_output", markdownOutput);
+    } catch (e) {
+      console.warn("Failed to save markdownOutput to localStorage:", e);
+    }
+  }, [markdownOutput]);
+
+  const handleGenerate = () => {
+=======
     es.onerror = () => {
       setError("Lost connection to job status stream. Please try again.");
       setIsGenerating(false);
@@ -170,8 +212,6 @@ const Generator = () => {
       setTimeout(() => setShouldShake(false), 400);
       return;
     }
-
-    setError('');
     setIsGenerating(true);
     setJobPhase('queued');
     setJobMessage('Submitting job...');
