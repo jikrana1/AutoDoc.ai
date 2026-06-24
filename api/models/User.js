@@ -3,26 +3,45 @@ import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
     required: true,
     unique: true,
-    lowercase: true
+    lowercase: true,
   },
   password: {
     type: String,
-    required: true
+    default: null,
   },
-  githubId: {
+  supabaseId: {
     type: String,
+    default: null,
+    sparse: true,
+  },
+  avatarUrl: {
+    type: String,
+    default: null,
+  },
+  authProvider: {
+    type: String,
+    enum: ['email', 'google', 'github'],
+    default: 'email',
+  },
+  //  ADD THESE TWO FIELDS FOR FORGOT PASSWORD
+  resetToken: {
+    type: String,
+    default: null
+  },
+  resetTokenExpiry: {
+    type: Date,
     default: null
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
-});   
+    default: Date.now,
+  },
+});
 
 export default mongoose.model('User', userSchema);
