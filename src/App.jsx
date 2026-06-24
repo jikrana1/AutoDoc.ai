@@ -17,21 +17,13 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/auth/success" element={<AuthSuccess />} />
-          <Route path="/" element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          } />
+          <Route path="/" element={<Home />} />
           <Route path="/generator" element={
             <ProtectedRoute>
               <Generator />
             </ProtectedRoute>
           } />
-          <Route path="/contributors" element={
-            <ProtectedRoute>
-              <Contributors />
-            </ProtectedRoute>
-          } />
+          <Route path="/contributors" element={<Contributors />} />
         </Routes>
       </AuthProvider>
       
